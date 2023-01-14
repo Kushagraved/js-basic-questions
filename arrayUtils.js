@@ -62,3 +62,11 @@ const longestWord=(input)=>{
 }
 
 // console.log(longestWord(["we", "love", "code", "academy"]));
+
+
+const isLeapYear=(year)=>{
+    year=Number(year);
+    return (year%4===0 && year%100!==0) || year%400===0;
+}
+
+console.log(isLeapYear(2000));
