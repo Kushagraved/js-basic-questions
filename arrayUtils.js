@@ -72,13 +72,27 @@ const isLeapYear=(year)=>{
 // console.log(isLeapYear(2000));
 
 
-
 const stringEndsWithScript=(input)=>{
     if(input.length<6){
         console.log("Consider string to have atleast 6 characters");
+        return;
     }
     return input.endsWith('Script');
 }
 
-console.log(stringEndsWithScript("JavaScript"));
-console.log(stringEndsWithScript("Javascript"));
+// console.log(stringEndsWithScript("JavaScript"));
+// console.log(stringEndsWithScript("Javascript"));
+
+const concatWithoutFirstCharacter=(input)=>{
+    if(input.length!==2){
+        console.log("Consider input to have 2 words");
+        return;
+    }
+    let word1=input[0];
+    let word2=input[1];
+    word1=word1.substring(1);
+    word2=word2.substring(1);
+    return word1+word2;
+}
+
+console.log(concatWithoutFirstCharacter(["code", "academy"]));
