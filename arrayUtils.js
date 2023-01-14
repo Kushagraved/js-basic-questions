@@ -117,4 +117,18 @@ const countVowels=(input)=>{
     return count;
 }
 
-console.log(countVowels("codeacademy"));
+// console.log(countVowels("codeacademy"));
+
+
+const replaceCharacterWithNextCharacter=(input)=>{
+    let output=input.split('').map((char,idx)=>{
+        let ascii=input.charCodeAt(idx)-'a'.charCodeAt(0);
+        char=String.fromCharCode((ascii+1)%26+'a'.charCodeAt(0));
+        return char;
+    })
+
+    return output.join('');
+}
+
+console.log(replaceCharacterWithNextCharacter("codeacademy"));
+console.log(replaceCharacterWithNextCharacter("lazyinterns"));
