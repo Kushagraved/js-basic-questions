@@ -29,5 +29,23 @@ const checkDigitsSame=(input)=>{
     }
     return true;
 }
-console.log(checkDigitsSame(22));
-console.log(checkDigitsSame(23));
+// console.log(checkDigitsSame(22));
+// console.log(checkDigitsSame(23));
+
+const changeCaptilization=(input)=>{
+    let output=[...input];
+    output.forEach((char,idx,output)=>{
+        if(char===char.toUpperCase()){
+            output[idx]=char.toLowerCase();
+        }
+        else{
+            output[idx]=char.toUpperCase();
+        }
+        // if(char===char.toLowerCase()){
+        //     char=char.toUpperCase();
+        // }
+    })
+    return output.join('');
+};
+
+console.log(changeCaptilization("MeRRy hAD a LITTle lAMp"));
