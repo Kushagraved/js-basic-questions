@@ -34,7 +34,7 @@ const checkDigitsSame=(input)=>{
 
 const changeCaptilization=(input)=>{
     let output=[...input];
-    output.forEach((char,idx,output)=>{
+    output.forEach((char,idx)=>{
         if(char===char.toUpperCase()){
             output[idx]=char.toLowerCase();
         }
@@ -48,4 +48,17 @@ const changeCaptilization=(input)=>{
     return output.join('');
 };
 
-console.log(changeCaptilization("MeRRy hAD a LITTle lAMp"));
+// console.log(changeCaptilization("MeRRy hAD a LITTle lAMp"));
+
+const longestWord=(input)=>{
+    let output;
+    input.forEach((word)=>{
+        if(!output || word.length>output.length){
+            output=word;
+        }
+    })
+
+    return output;
+}
+
+// console.log(longestWord(["we", "love", "code", "academy"]));
