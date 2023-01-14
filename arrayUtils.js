@@ -69,4 +69,16 @@ const isLeapYear=(year)=>{
     return (year%4===0 && year%100!==0) || year%400===0;
 }
 
-console.log(isLeapYear(2000));
+// console.log(isLeapYear(2000));
+
+
+
+const stringEndsWithScript=(input)=>{
+    if(input.length<6){
+        console.log("Consider string to have atleast 6 characters");
+    }
+    return input.endsWith('Script');
+}
+
+console.log(stringEndsWithScript("JavaScript"));
+console.log(stringEndsWithScript("Javascript"));
