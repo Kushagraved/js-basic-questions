@@ -95,4 +95,26 @@ const concatWithoutFirstCharacter=(input)=>{
     return word1+word2;
 }
 
-console.log(concatWithoutFirstCharacter(["code", "academy"]));
+// console.log(concatWithoutFirstCharacter(["code", "academy"]));
+
+const countVowels=(input)=>{
+    let count=0;
+    input.split('').forEach((char)=>{
+        switch(char){
+            case 'a':count++;
+                break;
+            case 'e':count++;
+                break;
+            case 'i':count++;
+                break;
+            case 'o':count++;
+                break;
+            case 'u':count++;
+                break;
+        }
+            
+    })
+    return count;
+}
+
+console.log(countVowels("codeacademy"));
