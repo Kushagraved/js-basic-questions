@@ -7,6 +7,7 @@ import * as arrayUtils from "./arrayUtils"
 //     })
 // })
 
+
 describe("computeLargestEven", () => {
     const testCases = [
         {
@@ -101,5 +102,84 @@ describe("isLeapYear", () => {
         });
     });
 });
+
+describe("stringEndsWithScript", () => {
+    const testCases = [
+        {
+            word: "javaScript",
+            expected: true
+        },
+        {
+            word: "javascript",
+            expected: false
+        }
+    ];
+
+    testCases.forEach(test => {
+        it(``, () => {
+            const res = arrayUtils.stringEndsWithScript(test.word);
+            expect(res).toEqual(test.expected);
+        });
+    });
+});
+
+
+describe("concatWithoutFirstCharacter", () => {
+    const testCases = [
+        {
+            wordList: ["code", "academy"],
+            expected: "odecademy"
+        },
+    ];
+
+    testCases.forEach(test => {
+        it(``, () => {
+            const res = arrayUtils.concatWithoutFirstCharacter(test.wordList);
+            expect(res).toEqual(test.expected);
+        });
+    });
+});
+
+describe("countVowels", () => {
+    const testCases = [
+        {
+            word: "codeacademy",
+            expected: 5
+        },
+    ];
+
+    testCases.forEach(test => {
+        it(``, () => {
+            const res = arrayUtils.countVowels(test.word);
+            expect(res).toEqual(test.expected);
+        });
+    });
+});
+
+describe("replaceCharacterWithNextCharacter", () => {
+    const testCases = [
+        {
+            word: "codeacademy",
+            expected: "dpefbdbefnz"
+        },
+        {
+            word: "lazyinterns",
+            expected: "mbazjoufsot"
+        }
+
+    ];
+
+    testCases.forEach(test => {
+        it(``, () => {
+            const res = arrayUtils.replaceCharacterWithNextCharacter(test.word);
+            expect(res).toEqual(test.expected);
+        });
+    });
+});
+
+
+
+
+
 
 
