@@ -1,4 +1,4 @@
-const computeLargestEven=(input)=>{
+export const computeLargestEven=(input)=>{
     let max_elem=Number.MIN_VALUE;
     input.forEach((num)=>{
         if(num%2===0){
@@ -10,7 +10,7 @@ const computeLargestEven=(input)=>{
 // console.log(computeLargestEven([1,2,3,4,5]));
 // console.log(computeLargestEven([1, 3, 5, 7]));
 
-const checkDigitsSame=(input)=>{
+export const checkDigitsSame=(input)=>{
     if(input.toString().length===1){
         console.log("Consider numbers to have 2 digits or mor");
     }
@@ -32,7 +32,7 @@ const checkDigitsSame=(input)=>{
 // console.log(checkDigitsSame(22));
 // console.log(checkDigitsSame(23));
 
-const changeCaptilization=(input)=>{
+export const changeCaptilization=(input)=>{
     let output=[...input];
     output.forEach((char,idx)=>{
         if(char===char.toUpperCase()){
@@ -50,7 +50,7 @@ const changeCaptilization=(input)=>{
 
 // console.log(changeCaptilization("MeRRy hAD a LITTle lAMp"));
 
-const longestWord=(input)=>{
+export const longestWord=(input)=>{
     let output;
     input.forEach((word)=>{
         if(!output || word.length>output.length){
@@ -64,7 +64,7 @@ const longestWord=(input)=>{
 // console.log(longestWord(["we", "love", "code", "academy"]));
 
 
-const isLeapYear=(year)=>{
+export const isLeapYear=(year)=>{
     year=Number(year);
     return (year%4===0 && year%100!==0) || year%400===0;
 }
@@ -72,7 +72,7 @@ const isLeapYear=(year)=>{
 // console.log(isLeapYear(2000));
 
 
-const stringEndsWithScript=(input)=>{
+export const stringEndsWithScript=(input)=>{
     if(input.length<6){
         console.log("Consider string to have atleast 6 characters");
         return;
@@ -83,7 +83,7 @@ const stringEndsWithScript=(input)=>{
 // console.log(stringEndsWithScript("JavaScript"));
 // console.log(stringEndsWithScript("Javascript"));
 
-const concatWithoutFirstCharacter=(input)=>{
+export const concatWithoutFirstCharacter=(input)=>{
     if(input.length!==2){
         console.log("Consider input to have 2 words");
         return;
@@ -97,7 +97,7 @@ const concatWithoutFirstCharacter=(input)=>{
 
 // console.log(concatWithoutFirstCharacter(["code", "academy"]));
 
-const countVowels=(input)=>{
+export const countVowels=(input)=>{
     let count=0;
     input.split('').forEach((char)=>{
         switch(char){
@@ -120,10 +120,12 @@ const countVowels=(input)=>{
 // console.log(countVowels("codeacademy"));
 
 
-const replaceCharacterWithNextCharacter=(input)=>{
+export const replaceCharacterWithNextCharacter=(input)=>{
+
     let output=input.split('').map((char,idx)=>{
         let ascii=input.charCodeAt(idx)-'a'.charCodeAt(0);
-        char=String.fromCharCode((ascii+1)%26+'a'.charCodeAt(0));
+        let next_char_ascii=(ascii+1)%26
+        char=String.fromCharCode(next_char_ascii+'a'.charCodeAt(0));
         return char;
     })
 
@@ -132,3 +134,5 @@ const replaceCharacterWithNextCharacter=(input)=>{
 
 console.log(replaceCharacterWithNextCharacter("codeacademy"));
 console.log(replaceCharacterWithNextCharacter("lazyinterns"));
+
+
