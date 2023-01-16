@@ -1,5 +1,4 @@
-
-import * as arrayUtils from "./arrayUtils"
+const arrayUtils=require('./arrayUtils');
 
 // describe('arrayUtils.js',()=>{
 //     test('computeLargestEven',()=>{
@@ -8,7 +7,7 @@ import * as arrayUtils from "./arrayUtils"
 // })
 
 
-describe("computeLargestEven", () => {
+describe('computeLargestEven', () => {
     const testCases = [
         {
             numberList: [1, 3, 5, 7],
@@ -21,7 +20,7 @@ describe("computeLargestEven", () => {
     ];
 
     testCases.forEach(test => {
-        it(``, () => {
+        it('', () => {
             const res = arrayUtils.computeLargestEven(test.numberList);
             expect(res).toEqual(test.expected);
         });
@@ -29,7 +28,7 @@ describe("computeLargestEven", () => {
 });
 
 
-describe("checkDigitsSame", () => {
+describe('checkDigitsSame', () => {
     const testCases = [
         {
             number: 22,
@@ -42,7 +41,7 @@ describe("checkDigitsSame", () => {
     ];
 
     testCases.forEach(test => {
-        it(``, () => {
+        it('', () => {
             const res = arrayUtils.checkDigitsSame(test.number);
             expect(res).toEqual(test.expected);
         });
@@ -50,7 +49,7 @@ describe("checkDigitsSame", () => {
 });
 
 
-describe("changeCaptilization", () => {
+describe('changeCaptilization', () => {
     const testCases = [
         {
             sentence: 'MeRRy hAD a LITTle lAMp',
@@ -59,23 +58,23 @@ describe("changeCaptilization", () => {
     ];
 
     testCases.forEach(test => {
-        it(``, () => {
+        it('', () => {
             const res = arrayUtils.changeCaptilization(test.sentence);
             expect(res).toEqual(test.expected);
         });
     });
 });
 
-describe("longestWord", () => {
+describe('longestWord', () => {
     const testCases = [
         {
-            wordList: ["we", "love", "code", "academy"],
-            expected: "academy"
+            wordList: ['we', 'love', 'code', 'academy'],
+            expected: 'academy'
         },
     ];
 
     testCases.forEach(test => {
-        it(``, () => {
+        it('', () => {
             const res = arrayUtils.longestWord(test.wordList);
             expect(res).toEqual(test.expected);
         });
@@ -83,7 +82,7 @@ describe("longestWord", () => {
 });
 
 
-describe("isLeapYear", () => {
+describe('isLeapYear', () => {
     const testCases = [
         {
             number: 2000,
@@ -96,27 +95,27 @@ describe("isLeapYear", () => {
     ];
 
     testCases.forEach(test => {
-        it(``, () => {
+        it('', () => {
             const res = arrayUtils.isLeapYear(test.number);
             expect(res).toEqual(test.expected);
         });
     });
 });
 
-describe("stringEndsWithScript", () => {
+describe('stringEndsWithScript', () => {
     const testCases = [
         {
-            word: "javaScript",
+            word: 'javaScript',
             expected: true
         },
         {
-            word: "javascript",
+            word: 'javascript',
             expected: false
         }
     ];
 
     testCases.forEach(test => {
-        it(``, () => {
+        it('', () => {
             const res = arrayUtils.stringEndsWithScript(test.word);
             expect(res).toEqual(test.expected);
         });
@@ -124,53 +123,53 @@ describe("stringEndsWithScript", () => {
 });
 
 
-describe("concatWithoutFirstCharacter", () => {
+describe('concatWithoutFirstCharacter', () => {
     const testCases = [
         {
-            wordList: ["code", "academy"],
-            expected: "odecademy"
+            wordList: ['code', 'academy'],
+            expected: 'odecademy'
         },
     ];
 
     testCases.forEach(test => {
-        it(``, () => {
+        it('', () => {
             const res = arrayUtils.concatWithoutFirstCharacter(test.wordList);
             expect(res).toEqual(test.expected);
         });
     });
 });
 
-describe("countVowels", () => {
+describe('countVowels', () => {
     const testCases = [
         {
-            word: "codeacademy",
+            word: 'codeacademy',
             expected: 5
         },
     ];
 
     testCases.forEach(test => {
-        it(``, () => {
+        it('', () => {
             const res = arrayUtils.countVowels(test.word);
             expect(res).toEqual(test.expected);
         });
     });
 });
 
-describe("replaceCharacterWithNextCharacter", () => {
+describe('replaceCharacterWithNextCharacter', () => {
     const testCases = [
         {
-            word: "codeacademy",
-            expected: "dpefbdbefnz"
+            word: 'codeacademy',
+            expected: 'dpefbdbefnz'
         },
         {
-            word: "lazyinterns",
-            expected: "mbazjoufsot"
+            word: 'lazyinterns',
+            expected: 'mbazjoufsot'
         }
 
     ];
 
     testCases.forEach(test => {
-        it(``, () => {
+        it('', () => {
             const res = arrayUtils.replaceCharacterWithNextCharacter(test.word);
             expect(res).toEqual(test.expected);
         });
